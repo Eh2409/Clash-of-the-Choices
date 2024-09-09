@@ -1,0 +1,383 @@
+body {
+    background-color: rgb(193, 255, 185);
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../img/background.png);
+    background-size: 500px;
+    background-repeat: repeat;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(167, 255, 108, 0.7);
+    width: 650px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+header img{
+    width: 650px;
+}
+
+.game-screen{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-screen{
+    display: block;
+    position: relative;
+    background-color: rgb(68, 85, 85,80%);
+    height: 300px;
+    width: 650px;
+    z-index: 20;
+}
+
+.play-game{
+    position: absolute;
+    top: 50px;
+    left: 225px;
+    width: 200px;
+    height: 100px;
+    font-size: 70px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(52, 1, 148);
+    color: white;
+}
+
+.arena {
+    background-image: url(../img/arena.png);
+    background-size: cover;
+    position: relative;
+    background-color: rgb(0, 0, 0);
+    height: 300px;
+    width: 650px;
+}
+
+
+/* computer */
+.computer-name{
+    position: absolute;
+    color: rgb(255, 0, 0);
+    background-color: rgb(0, 0, 0,40%);
+    font-weight: bold;
+    top: 220px;
+    left: 40px;
+    z-index: 10;
+    font-size: 20px;
+   
+}
+.computer-fighter img{
+    position: absolute;
+    height: 210px;
+    width: 120px;
+    top: 80px;
+    left: 20px;
+    z-index: 3;
+}
+
+.computer-life{
+    position: absolute;
+    background-color: rgb(21, 255, 0);
+    height: 30px;
+    width: 200px;
+    top: 260px;
+    left: 40px;
+    transition: width 1s;
+    z-index: 3;
+}
+.computer-life-percentage {
+    position: absolute;
+    top: 267px;
+    left: 50px;
+    font-weight: bold;
+    color: blue;
+    z-index: 3;
+}
+
+.computer-power{
+    position: absolute;
+    background-color: rgb(0, 81, 255);
+    height: 15px;
+    width: 250px;
+    top: 245px;
+    left: 40px;
+    transition: width 1s;
+    z-index: 3;
+}
+
+.computer-power-percentage{
+    position:absolute;
+    top: 242px;
+    left: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: 3;
+}
+
+/* computer attack */
+.computer-attck {
+    opacity: 100%;
+    transition: opacity 1s;
+}
+.show-computer-attack{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 100px;
+    left: 80px;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+.html-damage-computer{
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    top: 100px;
+    left: 220px;
+    z-index: 4; 
+}
+
+/* player */
+.player-name{
+    position: absolute;
+    color: rgb(0, 255, 42);
+    background-color: rgb(0, 0, 0,40%);
+    font-weight: bold;
+    top: 220px;
+    right: 40px;
+    z-index: 10;
+    font-size: 20px;
+   
+}
+
+.player-fighter img {
+    position: absolute;
+    height: 210px;
+    width: 120px;
+    top: 80px;
+    right: 20px;
+    z-index: 3;
+}
+
+.player-life{
+    position: absolute;
+    background-color: rgb(21, 255, 0);
+    height: 30px;
+    width: 200px;
+    top: 260px;
+    right: 40px;
+    transition: width 1s;
+    z-index: 3;
+}
+
+.player-life-percentage{
+    position:absolute;
+    top: 267px;
+    right: 50px;
+    font-weight: bold;
+    color: blue;
+    z-index: 3;
+}
+
+.player-power{
+    position: absolute;
+    background-color: rgb(0, 81, 255);
+    height: 15px;
+    width: 250px;
+    top: 245px;
+    right: 40px;
+    transition: width 1s;
+    z-index: 3;
+}
+
+.player-power-percentage{
+    position:absolute;
+    top: 242px;
+    right: 50px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    z-index: 3;
+}
+
+/* player attack */
+.player-attck {
+    opacity: 100%;
+    transition: opacity 1s;
+}
+.show-player-attack{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 100px;
+    right: 80px;
+    z-index: 1; 
+}
+.html-damage-player{
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    top: 100px;
+    right: 220px;
+    z-index: 4; 
+}
+
+/* draw */
+.draw-message {
+    position: absolute;
+    top: -80px;
+    left: 235px;
+    color: white;
+    font-size: 80px;
+    z-index: 6;
+    text-align: center;
+}
+
+.The-stronger-message{
+    position: absolute;
+    top: 55px;
+    left: 225px;
+    color: white;
+    font-size: 20px;
+    z-index: 6;
+    text-align: center;
+}
+
+.end-game-message{
+    position: absolute;
+    top: 0px;
+    left: 190px;
+    color: white;
+    font-size: 50px;
+    z-index: 6;
+    text-align: center;
+}
+/* last power */
+.all-the-power{
+    position: absolute;
+    top: 0px;
+    left: 70px;
+    color: white;
+    font-size: 35px;
+    z-index: 6;
+    text-align: center;
+}
+/* game pad */
+.game-pad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59, 145, 2, 0.7);
+    margin: 10px 0px;
+    padding: 10px;
+    width: 650px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.round-in-progress {
+    position: absolute;
+    background-color: rgba(1, 66, 26, 0.5);
+    padding: 10px;
+    width: 650px;
+    height: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 20px auto;
+    z-index: 10;
+}
+
+.new-game{
+    position: absolute;
+    height: 50px;
+    width:150px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    z-index: 20;
+    border-radius: 10px;
+    background-color: rgb(52, 1, 148);
+    color: white;
+}
+
+.battle-buttons{
+    text-align: center;
+    width: 500px;
+}
+.battle-buttons button {
+    height: 50px;
+    width:100px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: rgb(52, 1, 148);
+    color: white;
+    border-radius: 15px;
+}
+
+.game-pad input {
+    height: 30px;
+    width: 100px;
+    font-size: 20px;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.power-tag{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.erorr-input{
+    position: absolute;
+    bottom: 79px;
+    color: brown;
+    font-weight: bold;
+}
+
+.game-rules {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59, 145, 2, 0.7);
+    margin: 10px 0px;
+    padding: 10px;
+    width: 650px;
+    padding: 10px 15px 10px 0px;
+    border-radius: 20px;
+    margin: 20px auto;
+    color: rgb(30, 0, 58);
+}
+
+.game-rules p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 1px;
+}
+
+.game-rules li {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* tools */
+.hide {
+    opacity: 0%;
+} 
+
+.none {
+    display: none;
+}

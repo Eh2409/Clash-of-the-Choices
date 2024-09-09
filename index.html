@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of the Choices</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="header"><a href="index.html"><img src="img/logo.png" alt=""></a></div>
+    <div class="game-screen">
+        <div class="arena">
+        <div class="open-screen"><button class="play-game" onclick="play()">play</button></div>
+        <div class="all-the-power hide"></div>
+        <div class="end-game-message hide"></div>
+        <div class="message hide">
+            <p class="draw-message"> 
+            <p class="The-stronger-message"></p>
+        </p>
+    </div>
+        
+        <div class="computer">
+            <div class="computer-name">computer</div>
+            <div class="computer-fighter"><img src="img/computer.png" alt="computer"></div>
+            <div class="computer-power"></div>
+            <div class="computer-power-percentage">250 power</div>
+            <div class="computer-life"></div>
+            <div class="computer-life-percentage">200 HP</div>
+            <div class="computer-attck hide">
+                <img src="" alt="attak" class="show-computer-attack ">
+                <p class="html-damage-computer"></p>
+            </div>
+        </div>
+        <div class="player">
+            <div class="player-name">player</div>
+            <div class="player-fighter"><img src="img/player.png" alt="player"></div>
+            <div class="player-power"></div>
+            <div class="player-power-percentage">250 power</div>
+            <div class="player-life"></div>
+            <div class="player-life-percentage">200 HP</div>
+            <div class="player-attck hide">
+                <img src="" alt="attak" class="show-player-attack ">
+                <p class="html-damage-player"></p>
+            </div>
+            
+        </div>
+    </div>
+</div>  
+    <div class="game-pad none">  
+        <button class="new-game none" onclick="newGame()">new game</button>
+        <div class="round-in-progress none"></div>
+        <div class="battle-buttons">
+            <button onclick="playerAttack(this)">rock</button>
+            <button onclick="playerAttack(this)">paper</button>
+            <button onclick="playerAttack(this)">scissors</button>
+        </div>
+        <div class="power-tag">power:
+        <input type="number" min="1" max="200"  value="0"></div>
+    <div class="erorr-input"></div>
+</div>
+<div class="game-rules">
+<p>The rules of the game</p>
+<ul>
+    <li>Each round you must choose the amount of power for the attack and you must choose the type of attack</li>
+    <li>The players will present the attack they have chosen, the most effective type of attack will hit the opponent and cause him life damage according to the amount of power the attacking player has determined</li>
+    <li>If there is a tie between the attack types, the attack with the highest power type will hit</li>
+    <li>If there is a tie between the types of attacks and also the amount of power of the attacks, there will be no damage</li>
+    <li>If one of the players runs out of attack power, he will be exposed to a direct attack by the opposing player in which he will use all the power he has left for a final attack</li>
+  </ul>
+</div>
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
