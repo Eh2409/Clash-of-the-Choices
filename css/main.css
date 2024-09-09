@@ -341,8 +341,8 @@ header img{
 }
 
 .erorr-input{
-    position: absolute;
-    bottom: 79px;
+    position: relative;
+    bottom: -3px;
     color: brown;
     font-weight: bold;
 }
